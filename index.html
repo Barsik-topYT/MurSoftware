@@ -488,7 +488,6 @@
         .program-card:nth-child(1) { animation-delay: 0.05s; }
         .program-card:nth-child(2) { animation-delay: 0.1s; }
         .program-card:nth-child(3) { animation-delay: 0.15s; }
-        .program-card:nth-child(4) { animation-delay: 0.2s; }
 
         @keyframes cardAppear {
             from { opacity: 0; transform: scale(0.95); }
@@ -498,8 +497,7 @@
         @media (min-width: 901px) {
             .program-card:nth-child(1) { transform: rotate(-4deg) translateY(8px) translateX(6px); z-index: 1; }
             .program-card:nth-child(2) { transform: rotate(-1deg) translateY(2px) translateX(3px); z-index: 2; }
-            .program-card:nth-child(3) { transform: rotate(0deg) translateY(0px) translateX(0px); z-index: 4; }
-            .program-card:nth-child(4) { transform: rotate(3deg) translateY(5px) translateX(-5px); z-index: 3; }
+            .program-card:nth-child(3) { transform: rotate(3deg) translateY(5px) translateX(-5px); z-index: 3; }
 
             .programs-grid:hover .program-card {
                 transform: rotate(0deg) translateY(0) translateX(0);
@@ -590,22 +588,6 @@
             background: var(--accent);
             color: white;
             transform: translateY(-1px);
-        }
-
-        .feature-tag-new {
-            background: #10b981 !important;
-            color: white !important;
-            padding: 4px 12px !important;
-            border-radius: 20px !important;
-            font-size: 0.7rem !important;
-            font-weight: 700 !important;
-            display: inline-block !important;
-            animation: pulse 2s ease-in-out infinite !important;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 1; transform: scale(1); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);}
-            50% { opacity: 0.9; transform: scale(1.03); box-shadow: 0 0 0 5px rgba(16, 185, 129, 0);}
         }
 
         .program-download {
@@ -872,7 +854,6 @@
                 <ul class="nav-menu">
                     <li><a href="#" class="nav-link" data-i18n="nav.home">Главная</a></li>
                     <li><a href="#programs" class="nav-link" data-i18n="nav.programs">Программы</a></li>
-                    <!-- Файлы в одной папке, поэтому просто launcher.html -->
                     <li><a href="launcher.html" class="nav-link" data-i18n="nav.murflame">MurFlame Launcher</a></li>
                     <li><a href="#about" class="nav-link" data-i18n="nav.about">Обо мне</a></li>
                     <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Контакты</a></li>
@@ -957,29 +938,6 @@
                         </div>
                     </div>
 
-                    <!-- MurFlame Launcher (теперь launcher.html в той же папке) -->
-                    <div class="program-card" data-tilt>
-                        <div class="program-icon"><i class="fas fa-fire"></i></div>
-                        <h3 class="program-title">
-                            MurFlame Launcher
-                            <span class="feature-tag-new">NEW</span>
-                        </h3>
-                        <p class="program-description" data-i18n="murflame.desc">Простой и удобный лаунчер для Minecraft. Быстрый, безопасный, с открытым кодом.</p>
-                        <div class="program-features">
-                            <span class="feature-tag" data-i18n="murflame.tag1">Игровой лаунчер</span>
-                            <span class="feature-tag" data-i18n="murflame.tag2">Быстрый запуск</span>
-                            <span class="feature-tag" data-i18n="murflame.tag3">Open Source</span>
-                        </div>
-                        <div class="program-download">
-                            <a href="launcher.html" class="btn btn-primary" style="background: linear-gradient(135deg, var(--accent), #10b981); color: white;">
-                                <i class="fas fa-info-circle"></i> <span data-i18n="murflame.details">Подробнее</span>
-                            </a>
-                            <a href="https://github.com/Barsik-topYT/MurFlameLauncher" class="btn btn-source" target="_blank">
-                                <i class="fab fa-github"></i> <span data-i18n="common.source">Исходный код</span>
-                            </a>
-                        </div>
-                    </div>
-
                     <!-- MurTools -->
                     <div class="program-card" data-tilt>
                         <div class="program-icon"><i class="fas fa-toolbox"></i></div>
@@ -1036,7 +994,7 @@
                         </div>
                     </div>
                     <div class="about-stats">
-                        <div class="stat-item" data-count="4"><div class="stat-number">0</div><div class="stat-label" data-i18n="stats.projects">Проекта</div></div>
+                        <div class="stat-item" data-count="3"><div class="stat-number">0</div><div class="stat-label" data-i18n="stats.projects">Проекта</div></div>
                         <div class="stat-item" data-count="100"><div class="stat-number">0%</div><div class="stat-label" data-i18n="stats.opensource">Open Source</div></div>
                         <div class="stat-item"><div class="stat-number">GitHub</div><div class="stat-label" data-i18n="stats.releases">Все релизы там</div></div>
                     </div>
@@ -1077,7 +1035,6 @@
                     <h4 data-i18n="footer.projects">Программы</h4>
                     <ul>
                         <li><a href="https://github.com/Barsik-topYT/MurKey" target="_blank">MurKey</a></li>
-                        <!-- Файлы в одной папке, поэтому launcher.html -->
                         <li><a href="launcher.html">MurFlame Launcher</a></li>
                         <li><a href="https://github.com/Barsik-topYT/MurTools" target="_blank">MurTools</a></li>
                         <li><a href="https://github.com/Barsik-topYT/MurBlocker" target="_blank">MurBlocker</a></li>
@@ -1116,11 +1073,6 @@
                 'murkms.desc': 'Настройка лицензии Windows за один клик. Очень просто.',
                 'murkms.tag1': 'Volume Licensing',
                 'murkms.tag2': 'Open Source',
-                'murflame.desc': 'Простой и удобный лаунчер для Minecraft. Быстрый, безопасный, с открытым кодом.',
-                'murflame.tag1': 'Игровой лаунчер',
-                'murflame.tag2': 'Быстрый запуск',
-                'murflame.tag3': 'Open Source',
-                'murflame.details': 'Подробнее',
                 'murtools.desc': 'Сразу несколько полезных штук: MurBlocker, разблокировка файлов и MurKey.',
                 'murtools.tag1': 'Simple Unlocker',
                 'murtools.tag2': 'MurBlocker',
@@ -1169,11 +1121,6 @@
                 'murkms.desc': 'Configure Windows volume licensing with one click.',
                 'murkms.tag1': 'Volume Licensing',
                 'murkms.tag2': 'Open Source',
-                'murflame.desc': 'A simple and convenient launcher for Minecraft. Fast, secure, open source.',
-                'murflame.tag1': 'Game Launcher',
-                'murflame.tag2': 'Fast Launch',
-                'murflame.tag3': 'Open Source',
-                'murflame.details': 'Details',
                 'murtools.desc': 'A set of utilities for everyday tasks: cleaning, file unlocking, and more.',
                 'murtools.tag1': 'Simple Unlocker',
                 'murtools.tag2': 'MurBlocker',
